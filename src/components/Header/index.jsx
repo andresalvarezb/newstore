@@ -21,45 +21,49 @@ function Header() {
 
 	return (
 		<nav className={styles.Nav}>
-			<img src={iconMenu} alt='menu' className='menu' />
-			<div className='navbar-left'>
-				<img src={logo} alt='logo' className='nav-logo' />
+			<img src={iconMenu} alt='menu' className={styles.menu} />
+			<div className={styles['navbar-left']}>
+				<img src={logo} alt='logo' className={styles['nav-logo']} />
 				<ul>
 					<li>
-						{' '}
-						<Link href='/'>
-							<a>All</a>{' '}
+						<Link href='#'>
+							<a>All</a>
 						</Link>
 					</li>
 					<li>
-						{' '}
-						<a href='/'>Clothes</a>{' '}
+						<Link href='#'>
+							<a>Clothes</a>
+						</Link>
 					</li>
 					<li>
-						{' '}
-						<a href='/'>Electronics</a>{' '}
+						<Link href='#'>
+							<a>Electronics</a>
+						</Link>
 					</li>
 					<li>
-						{' '}
-						<a href='/'>Furniture</a>{' '}
+						<Link href='#'>
+							<a>Furniture</a>
+						</Link>
 					</li>
 					<li>
-						{' '}
-						<a href='/'>Toys</a>{' '}
+						<Link href='#'>
+							<a>Toys</a>
+						</Link>
 					</li>
 					<li>
-						{' '}
-						<a href='/'>Others</a>{' '}
+						<Link href='#'>
+							<a>Others</a>
+						</Link>
 					</li>
 				</ul>
 			</div>
-			<div className='navbar-right'>
+			<div className={styles['navbar-right']}>
 				<ul>
-					<li className='navbar-email' onClick={handleToggle}>
+					<li className={styles['navbar-email']} onClick={handleToggle}>
 						platzi@example.com
 					</li>
 					<li
-						className='navbar-shopping-cart'
+						className={styles['navbar-shopping-cart']}
 						onClick={() => setToggleOrders(!toggleOrders)}
 					>
 						<img src={shoppingCart} alt='shopping cart' />
