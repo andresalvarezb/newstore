@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './productList.module.css';
 import useFetchData from '@hooks/useFetchData';
 import ProductItem from '@components/ProductItem';
+import styles from './productList.module.css';
 
 // TODO: it's important understand how work the API to use it
 const API = 'https://api.escuelajs.co/api/v1/products';
@@ -14,7 +14,7 @@ function ProductList() {
 
 	return (
 		<section className={styles['main-container']}>
-			<div className={styles['ProductList']}>
+			<div className={styles.ProductList}>
 				{products.map((product) => (
 					<ProductItem key={product.id} product={product} />
 				))}
