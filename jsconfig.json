@@ -19,6 +19,9 @@
             ],
             "@context/*": [
                 "context/*"
+            ],
+            "@hooks/*": [
+                "hooks/*"
             ]
         }
     }
