@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import styles from './header.module.css';
 
-import Menu from '@components/Menu';
 import Link from 'next/link';
+import Image from 'next/image';
+import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
 import iconMenu from '@icons/icon_menu.svg';
 import AppContext from '@context/AppContext';
@@ -21,9 +22,9 @@ function Header() {
 
 	return (
 		<nav className={styles.Nav}>
-			<img src={iconMenu} alt='menu' className={styles.menu} />
+			<Image src={iconMenu} alt='menu' className={styles.menu} />
 			<div className={styles['navbar-left']}>
-				<img src={logo} alt='logo' className={styles['nav-logo']} />
+				<Image src={logo} alt='logo' className={styles['nav-logo']} />
 				<ul>
 					<li>
 						<Link href='#'>
@@ -66,7 +67,7 @@ function Header() {
 						className={styles['navbar-shopping-cart']}
 						onClick={() => setToggleOrders(!toggleOrders)}
 					>
-						<img src={shoppingCart} alt='shopping cart' />
+						<Image src={shoppingCart} alt='shopping cart' />
 						{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
 					</li>
 				</ul>
